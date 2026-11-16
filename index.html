@@ -642,6 +642,75 @@ footer{padding:30px 0 20px}.footer-brand{font-family:'Josefin Sans','Manrope',sa
 }
 </style>
 <link rel="preload" as="image" href="hero-fachada.webp" fetchpriority="high"/>
+<style>
+
+/* V28: hero sin barras laterales y top bar integrada con el cielo del render */
+.nav{
+  background: transparent;
+  overflow:hidden;
+  backdrop-filter:none;
+}
+.nav::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background-image:
+    linear-gradient(180deg, rgba(22,44,40,.78) 0%, rgba(14,30,25,.86) 100%),
+    linear-gradient(90deg, rgba(150,172,194,.18) 0%, rgba(184,202,220,.26) 58%, rgba(196,210,224,.22) 100%),
+    url('hero-fachada.webp');
+  background-size:cover;
+  background-position:center top;
+  transform:scale(1.03);
+}
+.nav::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;height:1px;
+  background:rgba(255,255,255,.18);
+}
+.hero{background:#13221c;}
+.hero-bg{
+  top:83px;
+  inset:auto 0 0 0;
+  height:calc(100% - 83px);
+  background-image:
+    linear-gradient(90deg, rgba(12,24,20,.82) 0%, rgba(12,24,20,.64) 26%, rgba(12,24,20,.28) 54%, rgba(12,24,20,.06) 100%),
+    linear-gradient(180deg, rgba(150,172,194,.22) 0%, rgba(12,24,20,.08) 120px, rgba(12,24,20,.02) 240px),
+    linear-gradient(0deg, rgba(8,18,15,.22), rgba(8,18,15,.03) 48%),
+    url('hero-fachada.webp');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  transform:none;
+}
+.hero-inner{padding-top:138px;}
+@media (max-width:820px){
+  .nav::before{
+    background-image:
+      linear-gradient(180deg, rgba(22,44,40,.80) 0%, rgba(14,30,25,.88) 100%),
+      linear-gradient(90deg, rgba(164,184,205,.18) 0%, rgba(193,209,224,.24) 100%),
+      url('hero-fachada.webp');
+    background-position:center top;
+  }
+  .hero-bg{
+    top:70px;
+    height:calc(100% - 70px);
+    background-image:
+      linear-gradient(90deg, rgba(12,24,20,.84) 0%, rgba(12,24,20,.58) 45%, rgba(12,24,20,.18) 100%),
+      linear-gradient(180deg, rgba(160,180,201,.18) 0%, rgba(12,24,20,.10) 98px, rgba(12,24,20,.02) 190px),
+      url('hero-fachada.webp');
+    background-size:cover;
+    background-position:58% center;
+  }
+  .hero-inner{padding-top:118px;}
+}
+@media (max-width:480px){
+  .hero-inner{padding-top:108px;}
+  .hero-bg{background-position:63% center;}
+}
+
+</style>
 </head>
 <body>
 <header class="nav">
