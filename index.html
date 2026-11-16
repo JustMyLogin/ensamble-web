@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#18241f" name="theme-color"/>
+<meta content="Ensamble: arquitectura modular prefabricada para viviendas y espacios comerciales. Módulos de 6 × 3 m, diseño flexible y construcción inteligente." name="description"/>
+<title>Ensamble — Diseño modular para vivir y trabajar</title>
+<link rel="preload" href="hero-ensamble.webp" as="image" media="(min-width: 821px)"/>
+<link rel="preload" href="hero-ensamble-mobile.webp" as="image" media="(max-width: 820px)"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Josefin+Sans:wght@400&amp;family=Raleway:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{--ink:#17241e;--ink2:#2c3830;--cream:#f7f6f0;--paper:#fffefa;--sage:#c9d3c4;--lime:#d2ef8a;--light:#e8e9e1;--muted:#6e756d;--border:#dcded5;--radius:18px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}img{display:block;max-width:100%}::selection{background:var(--lime);color:var(--ink)}
+    .container{max-width:1260px;padding:0 34px;margin:auto}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:700}.arrow{display:inline-block;transition:transform .2s}.link:hover .arrow,.btn:hover .arrow{transform:translate(4px,-3px)}.btn{border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:25px;border-radius:4px;padding:16px 21px;font-weight:700;font-size:13px;transition:background .2s,color .2s,transform .2s}.btn:hover{transform:translateY(-2px)}.btn-accent{background:var(--lime);color:var(--ink)}.btn-accent:hover{background:#e0f7a7}.btn-dark{background:var(--ink);color:white}.btn-dark:hover{background:#354b3e}.btn-outline{color:white;border-color:rgba(255,255,255,.6);background:transparent}.btn-outline:hover{background:rgba(255,255,255,.12)}.btn-ghost{border-color:#9da99b;background:transparent}.btn-ghost:hover{background:white}
+    .nav{height:83px;display:flex;align-items:center;justify-content:space-between;position:absolute;top:0;left:0;right:0;z-index:15;color:white;border-bottom:1px solid rgba(255,255,255,.25)}.logo{display:flex;align-items:center;gap:10px;font:800 25px 'Manrope',sans-serif;letter-spacing:-.08em}.logo svg{width:30px;height:30px}.nav-links{display:flex;align-items:center;gap:32px;font-size:13px;font-weight:600}.nav-links a:hover{color:var(--lime)}.nav-cta{border:1px solid rgba(255,255,255,.65);padding:12px 18px;border-radius:3px}.menu-btn{display:none;background:transparent;border:0;color:inherit;font-size:24px;padding:8px}
+    .hero{min-height:760px;height:92vh;max-height:1000px;position:relative;color:#fff;display:flex;align-items:center;background:#33463e;overflow:hidden}.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(15,28,22,.84) 0%,rgba(18,30,23,.55) 43%,rgba(18,30,23,.08) 100%),linear-gradient(0deg,rgba(12,24,17,.43),transparent 40%),url('hero-ensamble.webp');background-size:cover;background-position:center 55%;transform:scale(1.015)}.hero-inner{position:relative;z-index:1;padding-top:120px;width:100%}.hero-label{display:inline-flex;align-items:center;gap:11px;border:1px solid rgba(255,255,255,.5);border-radius:40px;padding:10px 15px;font-size:11px;letter-spacing:.12em;font-weight:700;text-transform:uppercase}.hero-label i{height:7px;width:7px;background:var(--lime);border-radius:50%}.hero h1{font:500 clamp(54px,7.35vw,114px)/1.01 'Manrope',sans-serif;letter-spacing:-.075em;max-width:870px;margin:32px 0 24px}.hero h1 em{font-style:normal;color:var(--lime)}.hero-copy{font-size:16px;line-height:1.8;max-width:500px;color:#ecf0e9;margin:0 0 35px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-bottom{position:absolute;z-index:1;bottom:34px;left:0;right:0}.hero-bottom .container{display:flex;justify-content:space-between;align-items:end}.scroll-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;display:flex;align-items:center;gap:14px}.scroll-label:before{content:'';display:block;width:42px;height:1px;background:rgba(255,255,255,.8)}.hero-bottom-index{font-size:12px;color:#e5eae3}
+    .stats{background:var(--ink);color:#fff}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);padding-top:34px;padding-bottom:34px}.stat{padding:12px 30px;border-left:1px solid #526056}.stat:first-child{padding-left:0;border-left:0}.stat strong{font:600 clamp(27px,3vw,42px)/1.15 'Manrope',sans-serif;letter-spacing:-.055em;display:block;margin-bottom:8px}.stat span{font-size:12px;color:#c2ccc0}
+    section{scroll-margin-top:80px}.section-pad{padding:115px 0}.headrow{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:48px}.section-title{font:500 clamp(37px,4.7vw,68px)/1.13 'Manrope',sans-serif;letter-spacing:-.065em;margin:16px 0 0;max-width:780px}.section-intro{font-size:15px;line-height:1.85;color:var(--muted);max-width:340px;margin:0}.eyebrow-dot{display:flex;align-items:center;gap:10px}.eyebrow-dot:before{content:'';width:8px;height:8px;background:#819b6c;border-radius:50%}
+    .intro{background:var(--paper)}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}.intro-visual{position:relative;min-height:490px}.intro-photo{height:500px;width:90%;object-fit:cover;border-radius:4px;background:#d3d4cb}.intro-float{position:absolute;right:0;bottom:35px;background:var(--lime);padding:27px 30px;min-width:220px;border-radius:3px}.intro-float strong{font:600 43px 'Manrope',sans-serif;letter-spacing:-.07em}.intro-float span{display:block;font-size:12px;line-height:1.5}.intro-copy h2{font:500 clamp(38px,4.3vw,64px)/1.12 'Manrope',sans-serif;letter-spacing:-.065em;margin:20px 0 23px}.intro-copy p{line-height:1.9;color:var(--muted);font-size:15px}.intro-points{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0 32px}.intro-point{border-top:1px solid var(--border);padding-top:15px;font-size:13px;font-weight:700}.intro-point span{color:#86947e;margin-right:8px}
+    .solutions{background:#e9ede5}.solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.solution-card{height:525px;position:relative;overflow:hidden;border-radius:4px;background:#536357}.solution-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s}.solution-card:hover .solution-img{transform:scale(1.055)}.solution-card:nth-child(1) .solution-img{background-image:linear-gradient(0deg,rgba(12,27,18,.84),rgba(12,27,18,0) 65%),url('casa-fachada.webp')}.solution-card:nth-child(2) .solution-img{background-image:linear-gradient(0deg,rgba(12,27,18,.84),rgba(12,27,18,0) 65%),url('local-fachada.webp')}.solution-content{position:absolute;bottom:0;left:0;right:0;padding:36px;color:white}.solution-num{font-size:12px;letter-spacing:.15em}.solution-content h3{font:600 36px 'Manrope',sans-serif;letter-spacing:-.05em;margin:11px 0}.solution-content p{max-width:390px;font-size:14px;line-height:1.7;color:#e7eee5;margin:0 0 22px}.round-arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:var(--ink);font-size:22px}
+    .system{background:var(--paper)}.system-grid{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}.system-desc{line-height:1.9;color:var(--muted);max-width:465px}.module-view{background:#e9ede5;padding:36px 25px;border-radius:4px}.module-heading{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:22px}.module-heading span{font-size:12px;color:var(--muted)}.module-heading strong{font-size:13px}.module-area{font:500 34px 'Manrope',sans-serif;letter-spacing:-.065em}.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0}.mod-cell{height:106px;background:#d9ded2;border:1px dashed #a5b5a2;border-radius:3px;display:flex;align-items:center;justify-content:center;position:relative;color:#667a65;font-size:12px}.mod-cell.active{background:#b3c5a7;border:1px solid #76926d;color:#2c462f;box-shadow:inset 0 0 0 5px rgba(255,255,255,.22)}.mod-cell.active:before{content:'6 × 3 m';font-weight:800;font-size:12px}.mod-cell:not(.active):before{content:'+';font-size:25px;font-weight:300}.mod-controls{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #cad1c5;padding-top:19px}.stepper{display:flex;align-items:center;gap:16px}.stepper button{height:34px;width:34px;border:1px solid #9eac9b;background:transparent;border-radius:50%;font-size:19px}.stepper button:hover{background:white}.stepper output{font-weight:800;min-width:15px;text-align:center}.module-note{font-size:11px;line-height:1.6;color:#788477;margin-top:16px}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}.feature{padding-top:15px;border-top:1px solid var(--border)}.feature .feature-number{font-size:12px;color:#78906f}.feature h4{font-size:14px;margin:12px 0 7px}.feature p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+    .walk{background:var(--ink);color:white}.walk .headrow{align-items:end}.walk .section-intro{color:#bac7bd}.walk-placeholder{border:1px solid #65786a;border-radius:4px;background:radial-gradient(circle at 53% 52%,#46604c 0%,#253b2d 36%,#14241a 80%);min-height:490px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:40px 20px}.walk-placeholder:before{content:'';position:absolute;inset:0;opacity:.2;background-image:linear-gradient(#9daf9b 1px,transparent 1px),linear-gradient(90deg,#9daf9b 1px,transparent 1px);background-size:48px 48px;transform:perspective(350px) rotateX(45deg) scale(1.6);mask-image:linear-gradient(to bottom,transparent,#000)}.cube{position:relative;width:112px;height:112px;margin:20px auto 35px}.cube svg{width:100%;height:100%;filter:drop-shadow(0 12px 25px #0004)}.walk-placeholder h3{position:relative;font:500 clamp(27px,3.4vw,43px) 'Manrope',sans-serif;letter-spacing:-.055em;margin:0 0 10px}.walk-placeholder p{position:relative;max-width:430px;color:#c4d0c5;font-size:14px;line-height:1.8}.walk-tag{position:absolute;top:23px;left:24px;border:1px solid #839985;border-radius:30px;padding:9px 13px;font-size:10px;font-weight:700;letter-spacing:.12em}.walk-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:16px;color:#a8baa9;font-size:12px}.walk-bottom code{font-size:11px;color:#bfd2b5}
+    .process{background:#d2ef8a}.process-steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:55px;border-top:1px solid #aab7a6}.process-step{padding:27px 26px 0 0}.process-step .number{font:500 33px 'Manrope',sans-serif;letter-spacing:-.05em;color:#8da087}.process-step h3{font-size:18px;margin:30px 0 12px}.process-step p{font-size:13px;line-height:1.85;color:var(--muted);max-width:235px}
+    .cta{background:var(--lime);padding:93px 0}.cta-grid{display:flex;justify-content:space-between;gap:30px;align-items:end}.cta h2{font:500 clamp(42px,5.8vw,82px)/1.07 'Manrope',sans-serif;letter-spacing:-.07em;max-width:790px;margin:17px 0 0}.cta .btn{white-space:nowrap}
+    .contact{background:var(--paper)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12%}.contact-info h2{font:500 clamp(38px,4vw,60px)/1.15 'Manrope',sans-serif;letter-spacing:-.065em;margin:18px 0}.contact-info p{max-width:400px;font-size:15px;color:var(--muted);line-height:1.9}.contact-info .contact-mark{display:flex;align-items:center;gap:12px;margin-top:55px;font-size:12px;color:#657566}.contact-mark:before{content:'';width:30px;height:1px;background:#83937f}.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:19px}.field{display:flex;flex-direction:column;gap:9px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid #ccd3c9;padding:15px;background:#fbfcf8;border-radius:3px;color:var(--ink);outline:0}.field input:focus,.field select:focus,.field textarea:focus{border-color:#5d7655;box-shadow:0 0 0 2px #d8e7ce}.field textarea{min-height:120px;resize:vertical}.form-foot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:15px}.form-foot small{font-size:11px;color:var(--muted);line-height:1.5;max-width:250px}.form-status{grid-column:1/-1;font-size:12px;color:#375c31;min-height:18px}
+    footer{background:#17241e;color:white;padding:55px 0 30px}.footer-top{display:flex;justify-content:space-between;gap:32px;align-items:start;padding-bottom:62px}.footer-top p{font-size:13px;color:#bfccbd;max-width:310px;line-height:1.8}.footer-links{display:flex;gap:68px}.footer-links div{display:flex;flex-direction:column;gap:16px;font-size:13px}.footer-links strong{font-size:11px;color:#9caf9c;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}.footer-links a:hover{color:var(--lime)}.footer-bottom{display:flex;justify-content:space-between;gap:12px;padding-top:25px;border-top:1px solid #394a3e;color:#9bad9c;font-size:11px}
+    @media(max-width:900px){.nav-links{gap:18px}.nav-links a{font-size:11px}.intro-grid,.system-grid,.contact-grid{gap:6%}.intro-photo{height:440px}.intro-visual{min-height:440px}.stats-grid{grid-template-columns:repeat(2,1fr);row-gap:12px}.stat:nth-child(3){padding-left:0;border-left:0}.solution-card{height:450px}.feature-list{gap:12px}.process-steps{grid-template-columns:repeat(2,1fr);gap:20px}.section-pad{padding:88px 0}}
+    @media(max-width:700px){.container{padding:0 21px}.nav{height:70px}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#18281e;padding:24px;flex-direction:column;align-items:stretch;gap:20px;border-bottom:1px solid #73816e}.nav-links.open{display:flex}.nav-links a{font-size:14px}.menu-btn{display:block}.hero{height:auto;min-height:790px}.hero-bg{background-position:65% center;background-image:linear-gradient(90deg,rgba(15,28,22,.85),rgba(15,28,22,.43)),url('hero-ensamble.webp')}.hero h1{font-size:clamp(50px,12vw,70px)}.hero-copy{font-size:14px;max-width:350px}.hero-bottom{bottom:22px}.hero-bottom-index{display:none}.stats-grid{padding-top:20px;padding-bottom:20px}.stat{padding:13px 10px 13px 20px}.stat strong{font-size:32px}.stat span{font-size:11px}.headrow{display:block}.section-intro{margin-top:18px}.section-pad{padding:74px 0}.intro-grid,.system-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.intro-visual{min-height:350px;order:2}.intro-photo{height:350px}.intro-float{bottom:14px;padding:19px 22px;min-width:175px}.intro-float strong{font-size:33px}.intro-copy{order:1}.solution-grid{grid-template-columns:1fr}.solution-card{height:420px}.solution-content h3{font-size:30px}.system-grid{gap:35px}.mod-cell{height:88px}.walk-placeholder{min-height:440px}.walk-bottom{display:block;line-height:1.8}.process-steps{grid-template-columns:1fr 1fr;gap:10px}.process-step{padding-right:12px}.process-step h3{font-size:16px}.cta{padding:70px 0}.cta-grid{display:block}.cta h2{margin-bottom:27px}.contact-form{gap:16px}.footer-top{display:block}.footer-links{margin-top:34px;gap:55px}.footer-bottom{flex-direction:column}.form-foot{align-items:start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  
+    /* Identidad visual Ensamble — logotipo oficial */
+    .logo{display:inline-flex;align-items:center;width:220px;height:70px;flex:none;letter-spacing:normal}
+    .logo img{display:block;width:100%;height:100%;object-fit:contain}
+    .footer-top .logo{width:258px;height:105px;margin:-17px 0 -5px}
+    /* Configurador: 1 módulo 3 × 6, o 2 módulos 6 × 6 */
+    .config-options{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:18px 0}
+    .config-option{border:1px solid #c5cec0;background:#f4f6f0;color:#29392e;border-radius:3px;text-align:left;padding:17px 15px;display:flex;flex-direction:column;gap:8px;transition:background .2s,border-color .2s}
+    .config-option span{font-size:9px;letter-spacing:.08em;font-weight:700;color:#627563}
+    .config-option strong{font:600 25px 'Manrope',sans-serif;letter-spacing:-.06em}
+    .config-option small{font-size:12px}
+    .config-option.selected{border:2px solid #486c4e;background:#d9e6d2;padding:16px 14px}
+    .config-option:focus-visible{outline:3px solid #6a915b;outline-offset:2px}
+    .model-stage{background:#f9faf6;border:1px solid #d2d9cd;padding:19px 20px 14px;margin-top:16px}
+    .model-topline{display:flex;justify-content:space-between;font-size:10px;color:#677c66;letter-spacing:.09em;font-weight:700}
+    .model-topline span:last-child{font-size:12px;color:#263c2d;letter-spacing:normal}
+    .plan-shell{margin:26px auto 12px;max-width:330px}
+    .plan-dim-top{text-align:center;font-size:11px;color:#5a6d5c;margin-left:25px;padding-bottom:7px;border-bottom:1px solid #a1b29e}
+    .plan-main{display:flex;align-items:stretch;gap:10px;margin-top:9px}
+    .plan-dim-side{writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-size:11px;color:#5a6d5c;border-left:1px solid #a1b29e;padding-left:7px;min-width:16px}
+    .plan-blocks{flex:1;display:grid;grid-template-rows:1fr;aspect-ratio:2 / 1;gap:0;transition:aspect-ratio .2s}
+    .plan-blocks.two-modules{grid-template-rows:1fr 1fr;aspect-ratio:1 / 1}
+    .plan-module{background:repeating-linear-gradient(135deg,#d8e5d0,#d8e5d0 9px,#d2e0ca 9px,#d2e0ca 10px);border:2px solid #72906e;display:flex;align-items:center;justify-content:center;color:#466146;font-size:11px;font-weight:800;letter-spacing:.06em;min-height:0}
+    .plan-module + .plan-module{border-top:1px dashed #72906e}
+    .plan-hint{text-align:center;color:#809181;font-size:10px;margin-top:14px}
+    .config-summary{display:flex;align-items:end;justify-content:space-between;gap:15px;border-top:1px solid #c9d4c6;margin-top:17px;padding-top:17px}
+    .config-summary small{font-size:10px;color:#627362;font-weight:700;letter-spacing:.05em}
+    .config-summary-count{text-align:right;display:flex;flex-direction:column;gap:8px}
+    .config-price{margin-top:16px;padding:16px 0;border-top:1px solid #c9d4c6;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+    .config-price-label{font-size:10px;color:#627362;font-weight:800;letter-spacing:.08em}
+    .config-price-amount{font:650 clamp(25px,3vw,34px) 'Manrope',sans-serif;letter-spacing:-.055em;color:#263c2d;font-variant-numeric:tabular-nums}
+    .config-summary-count strong{font-size:14px}
+    @media(max-width:700px){.logo{width:180px;height:62px}.footer-top .logo{width:240px;height:90px}.model-stage{padding:15px}.config-option strong{font-size:22px}}
+
+
+    /* Selector de uso y nueva orientación vertical de cada módulo (3 m horizontal × 6 m vertical). */
+    .config-type-label{font-size:10px;letter-spacing:.1em;color:#5d745f;font-weight:800;margin:22px 0 9px}
+    .type-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .type-option{border:1px solid #c5cec0;background:#f4f6f0;color:#29392e;border-radius:3px;padding:13px 10px;text-align:center;font-size:11px;font-weight:800;letter-spacing:.06em;line-height:1.4;cursor:pointer}
+    .type-option.selected{border:2px solid #486c4e;background:#d9e6d2;padding:12px 9px}
+    .type-option:focus-visible{outline:3px solid #6a915b;outline-offset:2px}
+    .config-option:disabled{opacity:.38;cursor:not-allowed}
+    /* Misma altura de visualización: el módulo individual ocupa la mitad del ancho. */
+    .plan-main{justify-content:center}
+    .plan-blocks{flex:0 0 calc((100% - 28px) / 2);width:calc((100% - 28px) / 2);grid-template-columns:1fr;grid-template-rows:1fr;aspect-ratio:1 / 2;align-self:center}
+    .plan-blocks.two-modules{flex:0 0 calc(100% - 28px);width:calc(100% - 28px);grid-template-columns:1fr 1fr;grid-template-rows:1fr;aspect-ratio:1 / 1}
+    .plan-module + .plan-module{border-top:2px solid #72906e;border-left:1px dashed #72906e}
+    .plan-blocks.two-modules .plan-module:first-child{border-right:0}
+    .plan-blocks.two-modules .plan-module:last-child{border-left:1px dashed #72906e}
+    .plan-dim-top{margin-left:25px}
+    .home-plan{display:none;flex:1;aspect-ratio:1/1;min-width:0}
+    /* V4: planta compacta y expansión lateral desde un único módulo base. */
+    .plan-shell{max-width:260px;margin:20px auto 8px}
+    .plan-main{justify-content:flex-start;align-items:stretch}
+    .plan-blocks,.plan-blocks.two-modules{
+      flex:1 1 auto;width:auto;min-width:0;aspect-ratio:1 / 1;
+      display:flex;grid-template-columns:none;grid-template-rows:none;
+      align-self:auto;overflow:hidden;
+    }
+    .plan-module{
+      box-sizing:border-box;flex:0 0 50%;min-width:0;
+      transform-origin:left center;
+      transition:transform .7s cubic-bezier(.2,.85,.2,1),opacity .45s ease;
+    }
+    .plan-module + .plan-module{border-top:2px solid #72906e;border-left:1px dashed #72906e}
+    .plan-blocks:not(.two-modules) .plan-module:last-child{transform:scaleX(0);opacity:0}
+    .plan-blocks.two-modules .plan-module:last-child{transform:scaleX(1);opacity:1}
+    .plan-blocks.two-modules .plan-module:first-child{border-right:0}
+    .plan-dim-top{position:relative;margin-left:25px;border-bottom:0;padding-bottom:8px}
+    .plan-dim-top::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:50%;background:#a1b29e;transition:width .7s cubic-bezier(.2,.85,.2,1)}
+    .model-stage.two-active .plan-dim-top::after,.model-stage.home-active .plan-dim-top::after{width:100%}
+    .home-plan{flex:1 1 auto}
+    @media(prefers-reduced-motion:reduce){.plan-module,.plan-dim-top::after{transition:none}}
+    .home-plan svg{display:block;width:100%;height:100%;background:#fffefb;border:2px solid #526653}
+    .model-stage.home-active .home-plan{display:block}
+    .model-stage.home-active .plan-blocks{display:none}
+    .model-stage.home-active .plan-hint{margin-top:13px}
+    .home-plan .wall{stroke:#2e3930;stroke-width:5;fill:none;stroke-linecap:square}
+    .home-plan .thin-wall{stroke:#455147;stroke-width:3;fill:none}
+    .home-plan .furn{fill:#e3e9de;stroke:#657b69;stroke-width:1.5}
+    .home-plan .tiny{font-size:10px;fill:#536b56;font-weight:750;letter-spacing:.04em}
+    .home-plan .detail{fill:none;stroke:#89978b;stroke-width:1.5}
+    @media(max-width:430px){.type-option{font-size:10px;padding:10px 5px}.type-option.selected{padding:9px 4px}.model-stage{padding:12px 10px}.plan-shell{max-width:290px}}
+
+    /* V5: marca mejor contrastada y presentacion de renders por configuracion */
+    .logo{width:245px;height:67px;padding:8px 12px;background:#fff;border-radius:3px;box-sizing:border-box}
+    .logo img{object-fit:contain;object-position:center;width:100%;height:100%}
+    .footer-top .logo{width:260px;height:76px;margin:0 0 12px}
+    .config-visual-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:14px;margin-top:18px;align-items:stretch}
+    .render-panel{background:#edf0e9;border:1px solid #d5ddcf;min-width:0;display:flex;flex-direction:column;overflow:hidden}
+    .render-frame{position:relative;aspect-ratio:4/5;min-height:0;background:linear-gradient(145deg,#dbe4d7,#f5f6f0);overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .render-frame img{width:100%;height:100%;object-fit:cover;display:none}
+    .render-frame.has-render img{display:block}
+    .render-empty{padding:17px;text-align:center;color:#607560}
+    .render-empty svg{width:56px;height:56px;display:block;margin:0 auto 16px;opacity:.52}
+    .render-empty strong{display:block;font-size:12px;line-height:1.5;letter-spacing:.045em;color:#3d5a42}
+    .render-empty span{display:block;font-size:11px;line-height:1.55;margin-top:7px}
+    .render-frame.has-render .render-empty{display:none}
+    .render-caption{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px;font-size:10px;color:#5b705d}
+    .render-caption label{cursor:pointer;font-weight:750;border:1px solid #829a81;border-radius:2px;padding:8px 9px;color:#2f5136;background:#f9faf6;white-space:nowrap}
+    .render-caption label:hover{background:#dae6d7}
+    .render-caption input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+    .render-caption label:focus-within{outline:2px solid #557b59;outline-offset:2px}
+    .plan-col{min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:stretch}
+    .config-visual-grid .plan-shell{width:100%;max-width:205px;margin:5px auto 7px}
+    .config-visual-grid .plan-hint{margin:9px 0 2px;font-size:9px;line-height:1.5}
+    .render-help{color:#798778;font-size:10px;margin:8px 0 0;line-height:1.5}
+    @media(max-width:1120px){.config-visual-grid{grid-template-columns:1fr}.render-frame{aspect-ratio:16/9}.config-visual-grid .plan-shell{max-width:215px;margin:20px auto 8px}}
+    @media(max-width:700px){.logo{width:210px;height:60px}.footer-top .logo{width:245px;height:70px}.config-visual-grid{grid-template-columns:1fr}.render-frame{aspect-ratio:16/9}}
+  
+/* V6: Imagen residencial real, con formato horizontal y sin recorte */
+.render-frame{aspect-ratio:4/3;background:#e6e9df}
+.render-frame.has-render img{object-fit:contain}
+.render-frame.has-render .render-empty{display:none}
+.render-panel:has(.has-render) .render-caption{background:#f1f4eb}
+.logo img{object-fit:contain}
+@media(max-width:700px){.render-frame{aspect-ratio:4/3}}
+
+/* V7: PNG transparente, sin placa blanca, bien recortado */
+.logo { background: transparent !important; padding: 0 !important; border-radius: 0 !important; }
+.logo img { object-fit: contain; object-position: left center; }
+.footer-top .logo { background: transparent !important; }
+
+/* V13 — Proceso informativo compacto */
+.process.section-pad{padding:48px 0 52px;}
+.process .section-title{font-size:clamp(32px,3.5vw,49px);line-height:1.1;margin-top:10px;}
+.process .process-steps{margin-top:24px;}
+.process .process-step{padding:16px 18px 0 0;}
+.process .process-step .number{font-size:24px;}
+.process .process-step h3{margin:10px 0 7px;font-size:16px;}
+.process .process-step p{font-size:12px;line-height:1.55;margin:0;max-width:240px;}
+@media(max-width:700px){
+ .process.section-pad{padding:38px 0 42px;}
+ .process .section-title{font-size:clamp(30px,8vw,42px);}
+ .process .process-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 18px;margin-top:20px;}
+ .process .process-step{padding:12px 0 0;}
+ .process .process-step .number{font-size:21px;}
+ .process .process-step h3{font-size:14px;margin:7px 0 5px;}
+ .process .process-step p{font-size:11px;line-height:1.5;}
+}
+@media(max-width:380px){.process .process-steps{grid-template-columns:1fr;gap:12px;}}
+
+
+/* V17 — landing enfocada en configurar y conversar */
+.hero{min-height:560px;height: min(780px, 100svh);max-height:none;}
+.hero-inner{padding-top:88px;padding-bottom:30px;}
+.hero h1{font-size:clamp(48px,6.6vw,100px);line-height:1.035;letter-spacing:-.072em;max-width:880px;margin:23px 0 18px;}
+.hero-copy{font-size:clamp(16px,1.6vw,20px);line-height:1.5;margin-bottom:25px;max-width:680px;}
+.hero-label{background:rgba(12,24,17,.18);backdrop-filter:blur(4px);padding:8px 15px;}
+.hero-proof{margin-top:15px!important;font-size:12px;line-height:1.55;color:rgba(255,255,255,.84)}
+.hero-actions .btn{font-size:14px;padding:17px 26px;min-height:52px}
+#configurador{scroll-margin-top:24px;}
+footer .footer-action-links{gap:20px;}
+@media(max-width:700px){
+ .hero{height:auto;min-height: min(740px,100svh);align-items:center;}
+ .hero-inner{padding-top:108px;padding-bottom:85px;}
+ .hero h1{font-size:clamp(42px,10vw,62px);margin:21px 0 15px;line-height:1.07;}
+ .hero-copy{font-size:16px;line-height:1.5;margin-bottom:21px;}
+ .hero-actions .btn{width:100%;justify-content:center;}
+ .hero-proof{font-size:11px;max-width:310px;}
+}
+@media(max-height:680px) and (min-width:701px){.hero{min-height:490px;height:100svh}.hero h1{font-size:clamp(45px,5.7vw,76px)}.hero-inner{padding-top:80px}}
+
+/* V20: galería para casa habitación y resumen simplificado */
+.system-projects-head{justify-content:flex-start}
+.config-summary{justify-content:flex-start}
+.config-summary > div{min-width:0}
+.config-summary-count{display:none !important}
+.home-gallery-thumbs{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;width:72px;z-index:3}
+.home-gallery-thumbs[hidden]{display:none !important}
+.gallery-thumb{appearance:none;border:1px solid #aeb8aa;background:#f8faf5;padding:4px;border-radius:3px;cursor:pointer;display:block;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.gallery-thumb:hover{border-color:#6d886f;transform:translateY(-1px)}
+.gallery-thumb.selected{border-color:#2d5135;box-shadow:0 0 0 1px #2d5135 inset}
+.gallery-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.render-frame.is-home-gallery{padding:14px 94px 14px 14px;box-sizing:border-box}
+.render-frame.is-home-gallery img{width:100%;height:100%;object-fit:contain}
+.model-stage.home-active .render-caption label,.model-stage.home-active .render-help{display:none}
+@media (max-width:700px){
+  .render-frame.is-home-gallery{padding:12px 12px 86px 12px}
+  .home-gallery-thumbs{left:12px;right:12px;top:auto;bottom:10px;transform:none;flex-direction:row;width:auto;justify-content:center}
+  .gallery-thumb{width:68px}
+}
+
+
+/* V21: renders comerciales fijos y sin botón de carga */
+.render-caption-simple{justify-content:flex-start}
+.render-caption-simple label{display:none !important}
+.render-help{display:none !important}
+
+</style>
+<style>
+/* V8 — configurador editorial horizontal y adaptable */
+.system-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:38px; align-items:stretch; }
+.system-grid > div:first-child { display:grid; grid-template-columns:minmax(240px,.85fr) minmax(0,1.15fr); column-gap:6%; align-items:start; }
+.system-grid > div:first-child .eyebrow,.system-grid > div:first-child .section-title,.system-grid > div:first-child .system-desc { grid-column:1; }
+.system-grid > div:first-child .feature-list { grid-column:2; grid-row:1 / span 3; margin-top:0; }
+.module-view { padding:26px 30px 30px; min-width:0; }
+.config-workspace { display:grid; grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr); gap:24px; align-items:start; margin-top:12px; }
+.config-controls { min-width:0; }
+.config-controls .config-type-label:first-child { margin-top:6px; }
+.config-controls .config-options { margin-bottom:0; }
+.config-controls .type-options { grid-template-columns:1fr; }
+.config-controls .config-options { grid-template-columns:1fr 1fr; }
+.config-controls .config-option { padding:13px 11px; min-width:0; }
+.config-controls .config-option strong { font-size:clamp(19px,2vw,27px); }
+.config-workspace .model-stage { margin-top:0; min-width:0; padding:15px; }
+.config-visual-grid { grid-template-columns:minmax(0,1.3fr) minmax(190px,.7fr); gap:15px; align-items:center; margin-top:14px; }
+.config-visual-grid .render-frame { aspect-ratio:4 / 3; max-height:330px; }
+.config-visual-grid .render-frame img { max-height:330px; }
+.config-visual-grid .plan-shell { max-width:185px; }
+.config-visual-grid .plan-col { min-width:0; }
+.config-summary { margin-top:12px; padding-top:12px; }
+.config-price { margin-top:10px; padding:12px 0 0; }
+/* El logotipo conserva alpha real y se ve blanco sobre la cabecera oscura */
+.nav .logo { background:transparent !important; padding:0 !important; width:225px; height:62px; }
+.nav .logo img { object-position:left center; }
+@media(max-width:1120px){
+ .system-grid > div:first-child {display:block;}
+ .system-grid > div:first-child .feature-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px;}
+ .config-workspace {grid-template-columns:minmax(250px,.8fr) minmax(0,1.2fr);gap:16px;}
+ .config-visual-grid {grid-template-columns:minmax(0,1.15fr) minmax(155px,.85fr);}
+ .config-visual-grid .render-frame {aspect-ratio:4/3;}
+ .config-visual-grid .plan-shell {max-width:160px;margin:10px auto 5px;}
+}
+@media(max-width:820px){
+ .config-workspace {grid-template-columns:minmax(0,1fr);}
+ .config-controls .type-options {grid-template-columns:1fr 1fr;}
+ .config-visual-grid {grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);}
+ .config-visual-grid .plan-shell {max-width:205px;}
+}
+@media(max-width:560px){
+ .module-view {padding:20px 15px;}
+ .system-grid > div:first-child .feature-list {grid-template-columns:1fr;}
+ .config-workspace {gap:15px;}
+ .config-controls .type-options {grid-template-columns:1fr 1fr;}
+ .config-controls .config-options {grid-template-columns:1fr 1fr;}
+ .config-controls .config-option {padding:11px 8px;}
+ .config-controls .config-option strong {font-size:22px;}
+ .config-visual-grid {grid-template-columns:1fr;}
+ .config-visual-grid .render-frame {aspect-ratio:4/3;max-height:unset;}
+ .config-visual-grid .render-frame img {max-height:unset;}
+ .config-visual-grid .plan-shell {max-width:180px;margin:12px auto;}
+ .config-visual-grid .plan-col {order:2;}
+ .nav .logo {width:185px;height:56px;}
+}
+
+/* V20: galería para casa habitación y resumen simplificado */
+.system-projects-head{justify-content:flex-start}
+.config-summary{justify-content:flex-start}
+.config-summary > div{min-width:0}
+.config-summary-count{display:none !important}
+.home-gallery-thumbs{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;width:72px;z-index:3}
+.home-gallery-thumbs[hidden]{display:none !important}
+.gallery-thumb{appearance:none;border:1px solid #aeb8aa;background:#f8faf5;padding:4px;border-radius:3px;cursor:pointer;display:block;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.gallery-thumb:hover{border-color:#6d886f;transform:translateY(-1px)}
+.gallery-thumb.selected{border-color:#2d5135;box-shadow:0 0 0 1px #2d5135 inset}
+.gallery-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.render-frame.is-home-gallery{padding:14px 94px 14px 14px;box-sizing:border-box}
+.render-frame.is-home-gallery img{width:100%;height:100%;object-fit:contain}
+.model-stage.home-active .render-caption label,.model-stage.home-active .render-help{display:none}
+@media (max-width:700px){
+  .render-frame.is-home-gallery{padding:12px 12px 86px 12px}
+  .home-gallery-thumbs{left:12px;right:12px;top:auto;bottom:10px;transform:none;flex-direction:row;width:auto;justify-content:center}
+  .gallery-thumb{width:68px}
+}
+
+</style><style>
+/* V9: Plano a la izquierda, render exclusivo en la derecha */
+.config-workspace{grid-template-columns:minmax(285px,.72fr) minmax(0,1.28fr);align-items:stretch;gap:24px}
+.config-controls{display:flex;flex-direction:column;min-width:0}
+.config-plan-under{margin-top:24px;padding:16px 12px 12px;background:#e3e9df;border:1px solid #cfd9c9;min-width:0;flex:1;display:flex;flex-direction:column;align-items:stretch;justify-content:center}
+.config-plan-caption{font-size:10px;font-weight:800;letter-spacing:.11em;color:#607560;text-align:left;margin:0 0 8px 6px}
+.config-plan-under .plan-col{width:100%;min-width:0;}
+.config-plan-under .plan-shell{width:100%;max-width:220px;margin:8px auto 5px}
+.config-plan-under .plan-hint{font-size:10px;text-align:center;color:#8b9a87;margin:8px 0 0}
+.config-visual-grid{display:block;margin-top:15px}
+.config-visual-grid .render-panel{width:100%;}
+.config-visual-grid .render-frame{aspect-ratio:4/3;max-height:none;min-height:280px}
+.config-visual-grid .render-frame img{max-height:100%;}
+/* The uploaded logo is monochrome white, on a transparent canvas */
+.nav .logo,.footer-top .logo{background:transparent !important;border:0 !important;padding:0 !important}
+.nav .logo img,.footer-top .logo img{object-fit:contain;object-position:left center}
+@media(max-width:1120px){
+ .config-workspace{grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr);gap:18px}
+ .config-plan-under .plan-shell{max-width:200px}
+}
+@media(max-width:820px){
+ .config-workspace{grid-template-columns:1fr;gap:16px}
+ .config-plan-under{flex:none;padding:16px}
+ .config-plan-under .plan-shell{max-width:215px}
+ .config-visual-grid .render-frame{min-height:0;aspect-ratio:4/3}
+}
+@media(max-width:560px){
+ .config-plan-under{margin-top:20px}
+ .config-plan-under .plan-shell{max-width:190px}
+ .config-visual-grid .render-frame{aspect-ratio:4/3}
+}
+
+/* V20: galería para casa habitación y resumen simplificado */
+.system-projects-head{justify-content:flex-start}
+.config-summary{justify-content:flex-start}
+.config-summary > div{min-width:0}
+.config-summary-count{display:none !important}
+.home-gallery-thumbs{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;width:72px;z-index:3}
+.home-gallery-thumbs[hidden]{display:none !important}
+.gallery-thumb{appearance:none;border:1px solid #aeb8aa;background:#f8faf5;padding:4px;border-radius:3px;cursor:pointer;display:block;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.gallery-thumb:hover{border-color:#6d886f;transform:translateY(-1px)}
+.gallery-thumb.selected{border-color:#2d5135;box-shadow:0 0 0 1px #2d5135 inset}
+.gallery-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.render-frame.is-home-gallery{padding:14px 94px 14px 14px;box-sizing:border-box}
+.render-frame.is-home-gallery img{width:100%;height:100%;object-fit:contain}
+.model-stage.home-active .render-caption label,.model-stage.home-active .render-help{display:none}
+@media (max-width:700px){
+  .render-frame.is-home-gallery{padding:12px 12px 86px 12px}
+  .home-gallery-thumbs{left:12px;right:12px;top:auto;bottom:10px;transform:none;flex-direction:row;width:auto;justify-content:center}
+  .gallery-thumb{width:68px}
+}
+
+</style>
+<style>
+/* V10: configurador compacto, sin estirar artificialmente sus columnas */
+.config-workspace{align-items:start;gap:18px;margin-top:8px}
+.config-controls{display:flex;flex-direction:column;align-self:start}
+.config-controls .config-type-label{margin-top:14px}
+.config-controls .config-type-label:first-child{margin-top:0}
+.config-controls .config-options{margin:10px 0 0}
+.config-controls .config-option{padding:11px 12px;gap:5px}
+.config-controls .config-option.selected{padding:10px 11px}
+.config-controls .config-option strong{font-size:22px}
+/* Evita el gran hueco provocado por flex:1 y justify-content:center en V9 */
+.config-plan-under{flex:0 0 auto;align-self:stretch;justify-content:flex-start;min-height:0;height:auto;margin-top:16px;padding:12px 14px;background:#e3e9df}
+.config-plan-caption{margin:0 0 3px;font-size:9px}
+.config-plan-under .plan-shell{width:100%;max-width:178px;margin:6px auto 3px}
+.config-plan-under .plan-hint{font-size:9px;line-height:1.3;margin:6px 0 0}
+.config-plan-under .plan-dim-top{padding-bottom:4px}
+.config-plan-under .plan-main{margin-top:5px;gap:6px}
+.config-plan-under .plan-module{font-size:9px}
+.config-plan-under .home-plan{max-width:100%}
+/* Render más panorámico y controles/precio en un bloque reducido */
+.config-workspace .model-stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:18px;align-self:start;padding:13px 16px 16px}
+.model-stage>.model-topline,.model-stage>.config-visual-grid,.model-stage>.render-help,.model-stage>.module-note,.model-stage>a.btn{grid-column:1 / -1}
+.config-visual-grid{margin-top:9px}
+.config-visual-grid .render-frame{height:clamp(190px,20vw,250px);min-height:0;max-height:250px;aspect-ratio:auto}
+.config-visual-grid .render-frame img{height:100%;max-height:100%;object-fit:contain}
+.render-empty{padding:10px}
+.render-empty svg{width:38px;height:38px;margin-bottom:7px}
+.render-caption{padding-top:8px;padding-bottom:0}
+.render-help{font-size:9px;line-height:1.35;margin-top:6px}
+.config-summary{grid-column:1;margin:12px 0 0;padding:10px 0 0;border-top:1px solid #c9d4c6;align-items:center;gap:10px}
+.config-summary .module-area{font-size:27px;white-space:nowrap}
+.config-summary-count{margin-left:auto}
+.config-summary-count strong{white-space:nowrap}
+.config-price{grid-column:2;margin:12px 0 0;padding:10px 0 0;border-top:1px solid #c9d4c6;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:3px}
+.config-price-amount{font-size:clamp(24px,2.5vw,31px);line-height:1.1;white-space:nowrap}
+.model-stage>.module-note{margin:11px 0 0;font-size:10px;line-height:1.4}
+.model-stage>a.btn{width:100%;margin-top:12px!important;padding-top:12px;padding-bottom:12px}
+@media(max-width:820px){
+ .config-workspace{grid-template-columns:1fr;gap:12px}
+ .config-plan-under{margin-top:14px;padding:10px 12px}
+ .config-plan-under .plan-shell{max-width:175px}
+ .config-visual-grid .render-frame{height:230px;max-height:none}
+}
+@media(max-width:560px){
+ .module-view{padding:18px 13px}
+ .config-controls .config-option strong{font-size:20px}
+ .config-plan-under .plan-shell{max-width:155px}
+ .config-visual-grid .render-frame{height:205px}
+ .config-workspace .model-stage{padding:12px;column-gap:10px}
+ .config-summary .module-area{font-size:24px}
+ .config-price-amount{font-size:clamp(22px,5vw,27px)}
+ .config-summary-count strong{font-size:11px}
+}
+
+/* V20: galería para casa habitación y resumen simplificado */
+.system-projects-head{justify-content:flex-start}
+.config-summary{justify-content:flex-start}
+.config-summary > div{min-width:0}
+.config-summary-count{display:none !important}
+.home-gallery-thumbs{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;width:72px;z-index:3}
+.home-gallery-thumbs[hidden]{display:none !important}
+.gallery-thumb{appearance:none;border:1px solid #aeb8aa;background:#f8faf5;padding:4px;border-radius:3px;cursor:pointer;display:block;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.gallery-thumb:hover{border-color:#6d886f;transform:translateY(-1px)}
+.gallery-thumb.selected{border-color:#2d5135;box-shadow:0 0 0 1px #2d5135 inset}
+.gallery-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.render-frame.is-home-gallery{padding:14px 94px 14px 14px;box-sizing:border-box}
+.render-frame.is-home-gallery img{width:100%;height:100%;object-fit:contain}
+.model-stage.home-active .render-caption label,.model-stage.home-active .render-help{display:none}
+@media (max-width:700px){
+  .render-frame.is-home-gallery{padding:12px 12px 86px 12px}
+  .home-gallery-thumbs{left:12px;right:12px;top:auto;bottom:10px;transform:none;flex-direction:row;width:auto;justify-content:center}
+  .gallery-thumb{width:68px}
+}
+
+</style>
+<style>
+/* V11: editorial applications within the modular system, no redundant lead sections */
+.system-grid > div:first-child {grid-template-columns:minmax(240px,.85fr) minmax(0,1.15fr);column-gap:6%;}
+.system-editorial-right {grid-column:2;grid-row:1 / span 3;min-width:0;display:flex;flex-direction:column;gap:25px;}
+.system-grid > div:first-child .feature-list {grid-column:auto;grid-row:auto;margin-top:0;}
+.system-projects {min-width:0;scroll-margin-top:90px;}
+.system-projects-head {display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#69806b;font-size:9px;font-weight:700;letter-spacing:.11em;margin-bottom:11px;}
+.system-project-gallery {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.system-project-card {display:block;position:relative;overflow:hidden;aspect-ratio:1.85 / 1;border-radius:3px;background:#c7d0c6;color:white;text-decoration:none;}
+.system-project-card img {width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+.system-project-card:hover img {transform:scale(1.045)}
+.system-project-overlay {position:absolute;inset:0;background:linear-gradient(to top,rgba(9,25,15,.76),transparent 78%);padding:12px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:4px;}
+.system-project-overlay small{font-size:9px;letter-spacing:.13em;font-weight:700;}
+.system-project-overlay strong{font-size:clamp(12px,1.15vw,16px);font-weight:600;line-height:1.1;}
+.system-project-arrow{position:absolute;right:12px;bottom:12px;font-size:17px;}
+#configurador{scroll-margin-top:90px}
+@media(max-width:800px){
+ .system-grid > div:first-child {display:block;}
+ .system-editorial-right {margin-top:25px;gap:20px;}
+ .system-projects {margin-top:0;}
+ .system-project-card{aspect-ratio:1.6 / 1;}
+}
+@media(max-width:420px){.system-project-gallery{gap:8px}.system-project-overlay{padding:9px}.system-project-overlay small{font-size:8px}.system-project-arrow{right:9px;bottom:9px}}
+
+/* V20: galería para casa habitación y resumen simplificado */
+.system-projects-head{justify-content:flex-start}
+.config-summary{justify-content:flex-start}
+.config-summary > div{min-width:0}
+.config-summary-count{display:none !important}
+.home-gallery-thumbs{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;width:72px;z-index:3}
+.home-gallery-thumbs[hidden]{display:none !important}
+.gallery-thumb{appearance:none;border:1px solid #aeb8aa;background:#f8faf5;padding:4px;border-radius:3px;cursor:pointer;display:block;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.gallery-thumb:hover{border-color:#6d886f;transform:translateY(-1px)}
+.gallery-thumb.selected{border-color:#2d5135;box-shadow:0 0 0 1px #2d5135 inset}
+.gallery-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.render-frame.is-home-gallery{padding:14px 94px 14px 14px;box-sizing:border-box}
+.render-frame.is-home-gallery img{width:100%;height:100%;object-fit:contain}
+.model-stage.home-active .render-caption label,.model-stage.home-active .render-help{display:none}
+@media (max-width:700px){
+  .render-frame.is-home-gallery{padding:12px 12px 86px 12px}
+  .home-gallery-thumbs{left:12px;right:12px;top:auto;bottom:10px;transform:none;flex-direction:row;width:auto;justify-content:center}
+  .gallery-thumb{width:68px}
+}
+
+</style><style>
+/* V14 — optimización del funnel */
+.hero{height:auto;min-height:min(710px,100svh);max-height:none;padding:112px 0 54px;align-items:center}
+.hero-inner{padding-top:0}.hero h1{font-size:clamp(48px,6.5vw,88px);margin:21px 0 19px;line-height:1.04;max-width:900px}
+.hero-copy{font-size:clamp(14px,1.3vw,17px);line-height:1.55;max-width:560px;margin:0 0 22px}
+.hero-proof{font-size:12px;font-weight:600;color:#f4f7f1;letter-spacing:.015em;margin:14px 0 0}
+.hero .btn-accent{font-size:14px;padding:17px 23px;min-height:54px;display:inline-flex;align-items:center;justify-content:center}
+.footer-funnel{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:25px}
+footer{padding:30px 0 20px}.footer-brand{font-family:'Josefin Sans','Manrope',sans-serif;font-size:22px;letter-spacing:.15em;color:white}.footer-tagline{font-size:12px;color:#c4d0c5}.footer-action-links{display:flex;gap:23px;flex-wrap:wrap;font-size:12px;font-weight:600}.footer-action-links a:hover{color:var(--lime)}
+.footer-bottom-simple{border-top:1px solid #455449;padding-top:15px;color:#b2beaf;font-size:11px}
+.price-caption{font-size:11px;line-height:1.5;color:#637768;margin:4px 0 0}
+.mobile-config-cta{display:none}
+@media(max-width:820px){.hero{min-height:100svh;max-height:none;padding:100px 0 80px}.hero h1{font-size:clamp(43px,9vw,69px);margin:18px 0}.hero-copy{max-width:460px;line-height:1.5}.hero .btn-accent{min-height:52px}.nav{height:70px}.footer-funnel{align-items:flex-start;flex-direction:column;gap:12px}.mobile-config-cta{display:block;position:fixed;z-index:50;left:14px;right:14px;bottom:calc(10px + env(safe-area-inset-bottom));text-align:center;background:#d2ef8a;color:#17241e;padding:13px 20px;font-size:13px;font-weight:800;border-radius:5px;box-shadow:0 5px 25px #13221c60}body{padding-bottom:53px}}
+@media(max-width:480px){.hero{min-height:100svh;padding:93px 0 68px}.hero h1{font-size:clamp(39px,10.1vw,55px)}.hero-copy{font-size:14px}.hero-label{font-size:9px;padding:8px 11px}.hero-proof{font-size:10px}.nav .logo{width:158px!important;height:47px!important}}
+@media(max-height:650px) and (min-width:821px){.hero{min-height:610px;padding:100px 0 40px}.hero h1{font-size:clamp(48px,5.2vw,70px)}}
+
+/* V15 – Marca monocromática alineada y contacto inmediato */
+.footer-brand{display:inline-flex;align-items:center;gap:10px;letter-spacing:.15em;line-height:1}
+.footer-symbol{width:25px;height:25px;flex:none;color:#fff;display:block}
+.footer-brand span{display:block}
+@media(max-width:700px){.footer-symbol{width:23px;height:23px}.footer-brand{gap:9px}}
+
+/* V20: galería para casa habitación y resumen simplificado */
+.system-projects-head{justify-content:flex-start}
+.config-summary{justify-content:flex-start}
+.config-summary > div{min-width:0}
+.config-summary-count{display:none !important}
+.home-gallery-thumbs{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;width:72px;z-index:3}
+.home-gallery-thumbs[hidden]{display:none !important}
+.gallery-thumb{appearance:none;border:1px solid #aeb8aa;background:#f8faf5;padding:4px;border-radius:3px;cursor:pointer;display:block;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.gallery-thumb:hover{border-color:#6d886f;transform:translateY(-1px)}
+.gallery-thumb.selected{border-color:#2d5135;box-shadow:0 0 0 1px #2d5135 inset}
+.gallery-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.render-frame.is-home-gallery{padding:14px 94px 14px 14px;box-sizing:border-box}
+.render-frame.is-home-gallery img{width:100%;height:100%;object-fit:contain}
+.model-stage.home-active .render-caption label,.model-stage.home-active .render-help{display:none}
+@media (max-width:700px){
+  .render-frame.is-home-gallery{padding:12px 12px 86px 12px}
+  .home-gallery-thumbs{left:12px;right:12px;top:auto;bottom:10px;transform:none;flex-direction:row;width:auto;justify-content:center}
+  .gallery-thumb{width:68px}
+}
+
+</style><style>
+/* V18 — CTA móvil aparece únicamente al salir de la vista el CTA del hero */
+.mobile-config-cta{transition:opacity .22s ease,transform .22s ease,visibility .22s ease;}
+@media(max-width:820px){
+ .mobile-config-cta{display:block;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(110%);}
+ body.hero-cta-out-of-view .mobile-config-cta{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);}
+}
+@media(min-width:821px){.mobile-config-cta{display:none!important;}}
+@media(prefers-reduced-motion:reduce){.mobile-config-cta{transition:none;}}
+/* Símbolo y letras: borde inferior alineado en la marca del pie */
+.footer-brand{align-items:flex-end;gap:10px;line-height:1;}
+.footer-brand .footer-symbol{width:25px;height:25px;align-self:flex-end;flex:none;display:block;transform:none;}
+.footer-brand span{display:block;line-height:1;position:relative;top:0;}
+@media(max-width:700px){.footer-brand .footer-symbol{height:23px;width:23px;}}
+
+/* V20: galería para casa habitación y resumen simplificado */
+.system-projects-head{justify-content:flex-start}
+.config-summary{justify-content:flex-start}
+.config-summary > div{min-width:0}
+.config-summary-count{display:none !important}
+.home-gallery-thumbs{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;width:72px;z-index:3}
+.home-gallery-thumbs[hidden]{display:none !important}
+.gallery-thumb{appearance:none;border:1px solid #aeb8aa;background:#f8faf5;padding:4px;border-radius:3px;cursor:pointer;display:block;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.gallery-thumb:hover{border-color:#6d886f;transform:translateY(-1px)}
+.gallery-thumb.selected{border-color:#2d5135;box-shadow:0 0 0 1px #2d5135 inset}
+.gallery-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.render-frame.is-home-gallery{padding:14px 94px 14px 14px;box-sizing:border-box}
+.render-frame.is-home-gallery img{width:100%;height:100%;object-fit:contain}
+.model-stage.home-active .render-caption label,.model-stage.home-active .render-help{display:none}
+@media (max-width:700px){
+  .render-frame.is-home-gallery{padding:12px 12px 86px 12px}
+  .home-gallery-thumbs{left:12px;right:12px;top:auto;bottom:10px;transform:none;flex-direction:row;width:auto;justify-content:center}
+  .gallery-thumb{width:68px}
+}
+
+</style>
+<style>
+
+/* V23: fotografía proporcionada por Ensamble, con tratamiento de contraste */
+.hero-bg {
+  background-image:
+    linear-gradient(90deg,rgba(12,24,20,.88) 0%,rgba(12,24,20,.71) 33%,rgba(12,24,20,.32) 68%,rgba(12,24,20,.16) 100%),
+    linear-gradient(0deg,rgba(8,18,15,.32),rgba(8,18,15,.06) 45%),
+    url('hero-ensamble.webp');
+  background-position:center center;
+  background-size:cover;
+}
+@media (max-width:820px) {
+  .hero-bg {
+    background-image:
+      linear-gradient(90deg,rgba(12,24,20,.78),rgba(12,24,20,.59)),
+      linear-gradient(0deg,rgba(8,18,15,.45),rgba(8,18,15,.10) 55%),
+      url('hero-ensamble-mobile.webp');
+    background-position:51% center;
+  }
+}
+.system-project-card img{object-position:center}
+
+</style>
+<style>
+
+/* V24: separar la imagen del hero del top menu */
+.nav{
+  background:linear-gradient(180deg, rgba(15,28,22,.90) 0%, rgba(15,28,22,.82) 65%, rgba(15,28,22,.74) 100%);
+  backdrop-filter:saturate(120%) blur(2px);
+}
+.hero{background:#13221c;}
+.hero-bg{
+  top:83px;
+  inset:auto 0 0 0;
+  height:calc(100% - 83px);
+  background-image:
+    linear-gradient(180deg, rgba(12,24,20,.60) 0%, rgba(12,24,20,.26) 36px, rgba(12,24,20,0) 92px),
+    linear-gradient(90deg,rgba(12,24,20,.86) 0%,rgba(12,24,20,.70) 28%,rgba(12,24,20,.34) 58%,rgba(12,24,20,.10) 100%),
+    linear-gradient(0deg,rgba(8,18,15,.28),rgba(8,18,15,.05) 48%),
+    url('hero-ensamble.webp');
+  background-size:cover;
+  background-position:center top;
+  transform:none;
+}
+.hero-inner{padding-top:138px;}
+@media (max-width:820px){
+  .nav{
+    background:linear-gradient(180deg, rgba(15,28,22,.92) 0%, rgba(15,28,22,.84) 100%);
+  }
+  .hero-bg{
+    top:70px;
+    height:calc(100% - 70px);
+    background-image:
+      linear-gradient(180deg, rgba(12,24,20,.65) 0%, rgba(12,24,20,.30) 32px, rgba(12,24,20,.08) 85px),
+      linear-gradient(90deg,rgba(12,24,20,.86) 0%,rgba(12,24,20,.66) 42%,rgba(12,24,20,.28) 100%),
+      url('hero-ensamble-mobile.webp');
+    background-position:center top;
+  }
+  .hero-inner{padding-top:118px;}
+}
+@media (max-width:480px){
+  .hero-inner{padding-top:108px;}
+}
+
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+<a aria-label="Ensamble, inicio" class="logo" href="#inicio"><img decoding="async" alt="ENSAMBLE — CONSTRUCCIÓN MODULAR" src="ensamble-logo.webp"/></a>
+<button aria-expanded="false" aria-label="Abrir menú" class="menu-btn" id="menuBtn">☰</button>
+<nav aria-label="Navegación principal" class="nav-links" id="navLinks"><a href="#configurador">Configurador</a><a class="nav-cta" href="https://wa.me/526863971874?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Ensamble." rel="noopener noreferrer" target="_blank">WhatsApp ↗</a></nav>
+</div>
+</header>
+<main>
+<section class="hero" id="inicio">
+<div class="hero-bg"></div>
+<div class="hero-inner"><div class="container"><span class="hero-label"><i aria-hidden="true"></i> NUEVA FORMA DE CONSTRUIR</span><h1>Tu espacio.<br/>Creado a tu medida.</h1><p class="hero-copy">Viviendas y locales comerciales prefabricados.</p><div class="hero-actions"><a class="btn btn-accent link" href="#configurador">Configura tu proyecto  ↗</a></div><p class="hero-proof">Desde $179,000 · Configuración en menos de un minuto</p></div></div>
+</section>
+<section class="system section-pad" id="sistema"><div class="container system-grid"><div><div class="eyebrow eyebrow-dot">Nuestro sistema</div><h2 class="section-title">La libertad de construir por módulos.</h2><p class="system-desc">Partimos de una unidad base de <strong>6 metros de largo por 3 metros de ancho</strong>. Ofrecemos dos configuraciones: una unidad de 3 × 6 m (18 m²) o dos módulos unidos de 6 × 6 m (36 m²).</p><div class="system-editorial-right"><div class="feature-list"><div class="feature"><span class="feature-number">01</span><h4>Diseño adaptable</h4><p>Configuraciones que responden a diferentes usos y necesidades.</p></div><div class="feature"><span class="feature-number">02</span><h4>Planificación clara</h4><p>Unidades repetibles para simplificar el desarrollo del proyecto.</p></div><div class="feature"><span class="feature-number">03</span><h4>Visión de crecimiento</h4><p>Opciones de uno o dos módulos para necesidades diferentes.</p></div><div class="feature"><span class="feature-number">04</span><h4>Identidad arquitectónica</h4><p>Espacios modernos, cálidos y pensados para su contexto.</p></div></div><div aria-label="Soluciones Ensamble" class="system-projects" id="soluciones"><div class="system-projects-head"><span>APLICACIONES DEL SISTEMA</span></div><div class="system-project-gallery"><a aria-label="Explorar casa habitación en el configurador" class="system-project-card" data-config-target="home" href="#configurador"><img alt="Viviendas modulares" loading="lazy" src="casa-fachada.webp"/><span class="system-project-overlay"><small>CASA HABITACIÓN</small><strong>Viviendas modulares</strong><span class="system-project-arrow">↗</span></span></a><a aria-label="Explorar local comercial en el configurador" class="system-project-card" data-config-target="commercial" href="#configurador"><img alt="Espacios comerciales" loading="lazy" src="local-fachada.webp"/><span class="system-project-overlay"><small>LOCAL COMERCIAL</small><strong>Espacios comerciales</strong><span class="system-project-arrow">↗</span></span></a></div></div></div></div><div class="module-view" id="configurador"><div class="module-heading"><div><span>EXPLORA EL SISTEMA</span><br/><strong>Configurador conceptual</strong></div><span>Personaliza tu espacio</span></div><div class="config-workspace"><div class="config-controls"><div class="config-type-label">TIPO DE PROYECTO</div><div aria-label="Seleccionar tipo de proyecto" class="type-options" role="group"><button aria-pressed="true" class="type-option selected" data-type="commercial" type="button">LOCAL COMERCIAL</button><button aria-pressed="false" class="type-option" data-type="home" type="button">CASA HABITACIÓN</button></div><div class="config-type-label">CANTIDAD DE MÓDULOS</div><div aria-label="Seleccionar superficie modular" class="config-options" role="group"><button aria-pressed="true" class="config-option selected" data-modules="1" type="button"><span>01 / UN MÓDULO</span><strong>3 × 6 m</strong><small>18 m²</small></button><button aria-pressed="false" class="config-option" data-modules="2" type="button"><span>02 / DOS MÓDULOS</span><strong>6 × 6 m</strong><small>36 m²</small></button></div><div class="config-plan-under"><div class="config-plan-caption">PLANTA CONCEPTUAL</div><div class="plan-col"><div class="plan-shell"><div class="plan-dim-top" id="horizontalDimension">3 m</div><div class="plan-main"><div class="plan-dim-side" id="verticalDimension">6 m</div><div aria-label="Planta de módulos" class="plan-blocks" id="modGrid"><div class="plan-module"><span>MÓDULO 01</span></div><div aria-hidden="true" class="plan-module"><span>MÓDULO 02</span></div></div><div aria-label="Planta conceptual de casa habitación con recámara, baño, sala, comedor y cocina" class="home-plan" id="homePlan">
+<svg aria-labelledby="homeTitle homeDesc" role="img" viewbox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"><title id="homeTitle">Casa habitación de dos módulos, 6 × 6 metros</title><desc id="homeDesc">Distribución conceptual inspirada en la referencia: recámara al noroeste, baño al noreste, sala al suroeste, comedor central y cocina al sureste.</desc>
+<rect fill="#fafbf8" height="360" width="360"></rect>
+<!-- zona recámara --> <rect fill="#edf2eb" height="162" width="196" x="14" y="14"></rect>
+<rect class="furn" height="91" rx="6" width="112" x="37" y="36"></rect><rect fill="#f8faf5" height="25" rx="5" stroke="#889a89" width="43" x="48" y="40"></rect><rect fill="#f8faf5" height="25" rx="5" stroke="#889a89" width="43" x="95" y="40"></rect><path class="detail" d="M37 81H149"></path><rect class="furn" height="91" width="29" x="159" y="31"></rect><text class="tiny" text-anchor="middle" x="81" y="155">RECÁMARA</text>
+<!-- baño --> <rect fill="#e8efed" height="124" width="128" x="218" y="14"></rect><circle cx="251" cy="44" fill="white" r="15" stroke="#83958a" stroke-width="2"></circle><circle cx="251" cy="44" fill="none" r="5" stroke="#83958a"></circle><rect fill="white" height="34" rx="5" stroke="#83958a" width="22" x="277" y="20"></rect><ellipse class="detail" cx="288" cy="39" rx="7" ry="9"></ellipse><rect fill="#e2ebe8" height="52" stroke="#849b8c" stroke-width="2" width="33" x="306" y="19"></rect><path class="detail" d="M307 20L338 70M338 20L307 70"></path><text class="tiny" text-anchor="middle" x="264" y="100">BAÑO</text>
+<!-- sala --> <rect fill="#f2f4ed" height="156" width="160" x="15" y="189"></rect><rect class="furn" height="47" rx="9" width="94" x="37" y="245"></rect><rect class="furn" height="67" rx="8" width="22" x="24" y="228"></rect><rect class="furn" height="20" rx="7" width="109" x="31" y="226"></rect><rect fill="#e0e5db" height="21" rx="3" stroke="#9ca99a" width="81" x="58" y="303"></rect><text class="tiny" text-anchor="middle" x="94" y="220">SALA</text>
+<!-- comedor --> <rect class="furn" height="65" rx="3" width="64" x="188" y="225"></rect><rect class="furn" height="20" rx="4" width="23" x="209" y="207"></rect><rect class="furn" height="21" rx="4" width="23" x="209" y="289"></rect><rect class="furn" height="25" rx="4" width="20" x="169" y="245"></rect><rect class="furn" height="25" rx="4" width="20" x="251" y="245"></rect><text class="tiny" text-anchor="middle" x="220" y="339">COMEDOR</text>
+<!-- cocina --> <rect fill="#e2e9de" height="200" stroke="#7b907d" stroke-width="2" width="53" x="293" y="145"></rect><rect class="furn" height="51" width="39" x="300" y="151"></rect><rect class="furn" height="42" width="39" x="300" y="214"></rect><rect fill="white" height="21" rx="7" stroke="#85978a" width="24" x="308" y="224"></rect><rect class="furn" height="64" width="39" x="300" y="264"></rect><circle cx="310" cy="277" fill="white" r="6" stroke="#8a9a8c"></circle><circle cx="328" cy="277" fill="white" r="6" stroke="#8a9a8c"></circle><circle cx="310" cy="297" fill="white" r="6" stroke="#8a9a8c"></circle><circle cx="328" cy="297" fill="white" r="6" stroke="#8a9a8c"></circle><text class="tiny" text-anchor="end" x="277" y="337">COCINA</text>
+<!-- muros y puerta --> <path class="wall" d="M8 8H352V352H8Z"></path><path class="thin-wall" d="M8 180H208M218 8V141M218 141H352"></path><path class="thin-wall" d="M218 180V203M218 249V272"></path><path class="detail" d="M218 203A46 46 0 0 1 264 249"></path><path class="thin-wall" d="M8 180H26M26 180V205"></path><path d="M155 352H224" stroke="#fafbf8" stroke-width="9"></path><path class="detail" d="M155 352A69 69 0 0 1 224 283"></path>
+<!-- junta entre los dos módulos, longitudinal --> <path d="M180 8V352" opacity=".52" stroke="#6f916e" stroke-dasharray="4 5" stroke-width="1"></path>
+</svg></div></div></div><div class="plan-hint" id="planHint">Representación esquemática a escala relativa</div></div></div></div><div class="model-stage" id="modelStage"><div class="model-topline"><span id="planTitle">PLANTA CONCEPTUAL · LOCAL COMERCIAL</span><span id="configName">3 × 6 m</span></div><div class="config-visual-grid"><div class="render-panel"><div class="render-frame" id="configRenderFrame"><img alt="Render del modelo seleccionado" id="configRenderImage" loading="lazy" decoding="async"/><div class="home-gallery-thumbs" hidden id="homeGalleryThumbs"></div><div class="render-empty"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" viewbox="0 0 64 64"><path d="M9 52V20L32 8l23 12v32H9Z"></path><path d="M9 20l23 13 23-13M32 33v19M17 31l8 4v9l-8-4v-9ZM39 35l8-4v9l-8 4v-9Z"></path></svg><strong>ESPACIO PARA RENDER</strong><span id="renderEmptyName">Local comercial · 18 m²</span></div></div><div class="render-caption render-caption-simple"><span id="renderSectionLabel">VISTA DEL PROYECTO</span></div></div></div><div class="config-summary"><div><small>SUPERFICIE</small><div class="module-area"><span id="areaValue">18</span> m²</div></div></div><div aria-live="polite" class="config-price"><span class="config-price-label">PRECIO</span><strong class="config-price-amount" id="configPrice">$179,000</strong></div><p class="price-caption">Precio de referencia · Solicita los detalles de tu proyecto.</p><p class="module-note">* Configuración conceptual: superficies nominales de 18 m² por módulo. La planta habitacional es ilustrativa y toma como referencia el diseño proporcionado; la distribución definitiva depende del proyecto y sus requisitos técnicos.</p><a class="btn btn-dark link" href="https://wa.me/526863971874" id="requestQuote" rel="noopener noreferrer" style="width:100%;margin-top:10px" target="_blank">Enviar por WhatsApp ↗</a></div></div></div></div></section>
+
+
+
+</main>
+<footer><div class="container"><div class="footer-funnel"><div class="footer-brand"><svg aria-hidden="true" class="footer-symbol" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M2 34V2H34V8H8V34Z" fill="currentColor"></path><rect fill="currentColor" height="23" width="23" x="11" y="11"></rect></svg><span>ENSAMBLE</span></div><div class="footer-tagline">Construcción modular · Espacios de 18 y 36 m²</div><div class="footer-action-links"><a href="#configurador">Configura tu proyecto</a><a href="https://wa.me/526863971874" rel="noopener noreferrer" target="_blank">WhatsApp</a></div></div><div class="footer-bottom-simple">© 2026 Ensamble · Construcción modular</div></div></footer><a class="mobile-config-cta" href="#configurador">Configura tu proyecto ↗</a>
+<script>
+    (()=>{
+      const menu=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+      menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰';});
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+      const options=[...document.querySelectorAll('.config-option')],types=[...document.querySelectorAll('.type-option')],grid=document.getElementById('modGrid');
+      let projectType='commercial',moduleCount=1;
+       const renderAssets=Object.create(null);
+       renderAssets['home-2']='casa-planta.webp';
+       renderAssets['commercial-1']='local-fachada.webp';
+       renderAssets['commercial-2']='local-fachada.webp';
+       const homeGalleryAssets=[
+         {src:'casa-fachada.webp',thumb:'casa-fachada-thumb.webp',alt:'Fachada de casa habitación de 36 m²',label:'Fachada'},
+         {src:renderAssets['home-2'],thumb:'casa-planta-thumb.webp',alt:'Distribución interior de casa habitación de 36 m²',label:'Distribución'}
+       ];
+       let activeHomeGallery=0;
+       const renderImage=document.getElementById('configRenderImage');
+       const renderFrame=document.getElementById('configRenderFrame');
+       const renderLabels={'commercial-1':'Local comercial · 18 m²','commercial-2':'Local comercial · 36 m²','home-2':'Casa habitación · 36 m²'};
+       const homeGalleryThumbs=document.getElementById('homeGalleryThumbs');
+       const renderSectionLabel=document.getElementById('renderSectionLabel');
+       function currentRenderKey(){return projectType+'-'+moduleCount;}
+       function renderHomeThumbs(){
+         homeGalleryThumbs.innerHTML='';
+         homeGalleryAssets.forEach((item,index)=>{
+           const btn=document.createElement('button');
+           btn.type='button';
+           btn.className='gallery-thumb'+(index===activeHomeGallery?' selected':'');
+           btn.setAttribute('aria-pressed',String(index===activeHomeGallery));
+           btn.setAttribute('aria-label','Mostrar '+item.label.toLowerCase());
+           btn.title=item.label;
+           btn.innerHTML='<img src="'+item.thumb+'" alt="'+item.label+'" loading="lazy" decoding="async">';
+           btn.addEventListener('click',()=>{activeHomeGallery=index;updateConfigRender();});
+           homeGalleryThumbs.appendChild(btn);
+         });
+       }
+       function updateConfigRender(){
+         const key=currentRenderKey();
+         let src='';
+         if(projectType==='home'){
+           const item=homeGalleryAssets[activeHomeGallery]||homeGalleryAssets[0];
+           src=item.src;
+           renderImage.alt=item.alt;
+           document.getElementById('renderEmptyName').textContent=renderLabels['home-2'];
+           renderFrame.classList.add('has-render','is-home-gallery');
+           homeGalleryThumbs.hidden=false;
+           renderSectionLabel.textContent='GALERÍA DEL PROYECTO';
+           renderHomeThumbs();
+         }else{
+           src=renderAssets[key];
+           renderImage.alt='Render de '+renderLabels[key];
+           document.getElementById('renderEmptyName').textContent=renderLabels[key];
+           renderFrame.classList.toggle('has-render',Boolean(src));
+           renderFrame.classList.remove('is-home-gallery');
+           homeGalleryThumbs.hidden=true;
+           renderSectionLabel.textContent='VISTA DEL PROYECTO';
+         }
+         renderImage.removeAttribute('src');
+         if(src)renderImage.src=src;
+       }
+      function renderConfigurator(){
+        if(projectType==='home')moduleCount=2;
+        types.forEach(btn=>{const selected=btn.dataset.type===projectType;btn.classList.toggle('selected',selected);btn.setAttribute('aria-pressed',String(selected));});
+        options.forEach(btn=>{const count=Number(btn.dataset.modules),selected=count===moduleCount;btn.classList.toggle('selected',selected);btn.setAttribute('aria-pressed',String(selected));btn.disabled=projectType==='home'&&count===1;btn.title=btn.disabled?'Casa habitación disponible únicamente con 2 módulos':'';});
+        // Mantener ambos nodos montados para animar el segundo módulo sin saltos de layout.
+        grid.classList.toggle('two-modules',moduleCount===2);
+        grid.lastElementChild.setAttribute('aria-hidden',String(moduleCount!==2));
+        document.getElementById('modelStage').classList.toggle('home-active',projectType==='home');
+        document.getElementById('modelStage').classList.toggle('two-active',moduleCount===2);
+        document.getElementById('planTitle').textContent=projectType==='home'?'PLANTA CONCEPTUAL · CASA HABITACIÓN':'PLANTA CONCEPTUAL · LOCAL COMERCIAL';
+        document.getElementById('configName').textContent=moduleCount===1?'3 × 6 m':'6 × 6 m';
+        document.getElementById('horizontalDimension').textContent=moduleCount===1?'3 m':'6 m';
+        document.getElementById('verticalDimension').textContent='6 m';
+        document.getElementById('areaValue').textContent=moduleCount*18;
+        document.getElementById('configPrice').textContent=projectType==='home'?'$325,000':moduleCount===1?'$179,000':'$289,000';
+        document.getElementById('planHint').textContent=projectType==='home'?'Distribución conceptual inspirada en la planta de referencia · No es plano ejecutivo':'Representación esquemática a escala relativa';
+         updateConfigRender();
+      }
+      options.forEach(btn=>btn.addEventListener('click',()=>{if(btn.disabled)return;moduleCount=Number(btn.dataset.modules);renderConfigurator();}));
+      types.forEach(btn=>btn.addEventListener('click',()=>{projectType=btn.dataset.type;renderConfigurator();}));
+      renderConfigurator();
+      document.getElementById('currentYear').textContent=new Date().getFullYear();
+    })();
+  </script>
+<!-- INTEGRACIÓN FUTURA DEL RECORRIDO: Reemplaza el interior de #walkthrough-container por:
+       <iframe src="D36_walkthrough_SELF_CONTAINED.html" title="Recorrido virtual Ensamble D36" style="width:100%;height:590px;border:0" allowfullscreen></iframe>
+       Aloja ambos archivos en un mismo sitio HTTPS para el funcionamiento más consistente. -->
+<script>document.querySelectorAll('[data-config-target]').forEach(card=>{card.addEventListener('click',()=>{const type=card.dataset.configTarget;const btn=document.querySelector('.type-option[data-type="'+type+'"]');if(btn)btn.click();});});</script><script>
+(function(){
+ const quote=document.getElementById('requestQuote');
+ function selection(){
+  const home=document.querySelector('.type-option[data-type="home"]')?.classList.contains('selected');
+  const two=document.querySelector('.config-option[data-modules="2"]')?.classList.contains('selected');
+  const name=home?'Casa habitación':'Local comercial';
+  const area=(home||two)?36:18;
+  const price=home?'$325,000':two?'$289,000':'$179,000';
+  return {name,area,price};
+ }
+ quote?.addEventListener('click',()=>{
+   const v=selection();
+   const msg=`Hola, me interesa configurar un proyecto con Ensamble.\n\nTipo: ${v.name}\nSuperficie: ${v.area} m²\nPrecio mostrado: ${v.price}\n\n¿Podrían darme información sobre los siguientes pasos, disponibilidad e instalación?`;
+   quote.href='https://wa.me/526863971874?text='+encodeURIComponent(msg);
+   // The <a target="_blank"> opens exactly one tab; Ensamble remains open.
+
+ });
+})();
+</script>
+<script>
+/* Mostrar CTA fijo sólo después del hero y mientras no sea visible el configurador. */
+(function(){
+ const heroButton=document.querySelector('.hero-actions a[href="#configurador"]');
+ if(!heroButton)return;
+ function syncStickyCTA(){
+   const bounds=heroButton.getBoundingClientRect();
+   const passedHeroCTA=bounds.bottom<=0;
+   const config=document.getElementById('configurador');
+   const configBounds=config?.getBoundingClientRect();
+   const configuratorIsVisible=!!configBounds && configBounds.top < window.innerHeight && configBounds.bottom > 0;
+   document.body.classList.toggle('hero-cta-out-of-view',passedHeroCTA && !configuratorIsVisible);
+ }
+ window.addEventListener('scroll',syncStickyCTA,{passive:true});
+ window.addEventListener('resize',syncStickyCTA,{passive:true});
+ syncStickyCTA();
+})();
+</script>
+</body>
+</html>

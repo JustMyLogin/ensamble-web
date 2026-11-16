@@ -1,16 +1,10 @@
-# Ensamble V23 — listo para Dokploy
+# Ensamble V26 — compatible con archivos en raíz de GitHub
 
-Hero actualizado con imagen suministrada por Ensamble, capa oscura responsiva y CTA visible.
-Tarjetas de Casa Habitación y Local Comercial con renders originales.
-Galería de Casa Habitación: fachada primero, distribución segundo.
-Todas las imágenes principales son archivos WebP locales en `assets/`.
+Este paquete está diseñado para repositorios en los que `index.html`, `Dockerfile` y las imágenes `.webp` están todos en la raíz (sin carpeta `assets`).
 
-## Despliegue
-Subir el contenido del ZIP al repositorio existente; usar Build Type Dockerfile, puerto de contenedor 80.
-No subir el ZIP dentro del repositorio, sino sus archivos descomprimidos.
+## Pasos
+1. Sube los archivos del ZIP directamente a la raíz del mismo repositorio en GitHub, reemplazando `index.html`.
+2. Conserva el `Dockerfile` (puerto 80), sube todos los WebP si faltan.
+3. Vuelve a desplegar en Dokploy. Si aparece la versión antigua, fuerza un recargado (Ctrl + F5).
 
-
-V24: la imagen del hero comienza debajo de la barra superior; la navegación queda sobre una franja oscura separada con transición degradada.
-
-
-V25: CTA «Enviar por WhatsApp»; navegación nativa target=_blank (sin doble pestaña ni redirección local); degradado superior del hero más corto.
+El código usa rutas relativas a la raíz como `hero-ensamble.webp` y `ensamble-logo.webp`.
