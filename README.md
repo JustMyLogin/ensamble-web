@@ -1,4 +1,5 @@
-Ensamble V27: hero con fachada completa (sin recorte); archivos listos para subir directamente a la raíz de GitHub. Configurar Dokploy con Dockerfile, puerto 80.
+# Ensamble V29 · Optimización móvil
 
+Se conserva el diseño de laptop de V28. En móviles, la fotografía se muestra completa en el ancho de la pantalla, el título y el CTA quedan en un panel oscuro legible y se ajustan menú y configurador.
 
-V28: el hero vuelve a ocupar todo el ancho sin barras negras laterales y la barra superior usa un fondo inspirado en el cielo del render.
+Para GitHub, sube los archivos a la raíz del repositorio. En Dokploy, desplegar con Dockerfile y puerto de contenedor 80.
