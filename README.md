@@ -1,19 +1,16 @@
-# Ensamble — sitio estático para Dokploy
+# Ensamble V23 — listo para Dokploy
 
-Archivos: `index.html` (web completa) y `Dockerfile` (Nginx en puerto 80).
+Hero actualizado con imagen suministrada por Ensamble, capa oscura responsiva y CTA visible.
+Tarjetas de Casa Habitación y Local Comercial con renders originales.
+Galería de Casa Habitación: fachada primero, distribución segundo.
+Todas las imágenes principales son archivos WebP locales en `assets/`.
 
-## Publicar
+## Despliegue
+Subir el contenido del ZIP al repositorio existente; usar Build Type Dockerfile, puerto de contenedor 80.
+No subir el ZIP dentro del repositorio, sino sus archivos descomprimidos.
 
-1. Sube el contenido de esta carpeta a la raíz de un repositorio GitHub/Git.
-2. En Dokploy, crea Project > Application y selecciona el servidor de despliegue.
-3. En Source, conecta el repositorio y la rama principal.
-4. En Build Type selecciona Dockerfile (`./Dockerfile`) y despliega.
-5. En Domains, añade tu dominio y configura `Container Port = 80`, `Path = /`, `HTTPS = ON`, `Certificate = Let's Encrypt`.
-6. En tu proveedor DNS crea `A @ -> IP pública del servidor que aloja la aplicación` (y opcionalmente `CNAME www -> @`).
-7. Comprueba el certificado, el configurador y el enlace a WhatsApp.
 
-Para usar server1, agrégalo a Dokploy de server0 como Deployment Server (SSH) y selecciona server1 en la app; el DNS debe apuntar a la IP pública de server1.
+V24: la imagen del hero comienza debajo de la barra superior; la navegación queda sobre una franja oscura separada con transición degradada.
 
-## Consideraciones
 
-El sitio contiene imágenes integradas en el HTML (render residencial). Las imágenes de referencia externas (Unsplash) y tipografías Google necesitan conexión a internet. El botón de WhatsApp utiliza +52 686 397 1874. No hace falta un backend ni base de datos.
+V25: CTA «Enviar por WhatsApp»; navegación nativa target=_blank (sin doble pestaña ni redirección local); degradado superior del hero más corto.
