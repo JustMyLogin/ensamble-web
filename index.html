@@ -779,6 +779,22 @@ footer{padding:30px 0 20px}.footer-brand{font-family:'Josefin Sans','Manrope',sa
 }
 
 </style>
+
+<style>
+/* V30: evitar espacio vacío bajo el CTA en teléfonos. */
+@media (max-width:820px) {
+  .hero {
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    padding:0 0 24px !important;
+  }
+  .hero-inner {padding-bottom:0 !important;}
+}
+@media (max-width:480px) {
+  .hero {padding-bottom:20px !important;}
+}
+</style>
 </head>
 <body>
 <header class="nav">
